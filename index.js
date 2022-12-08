@@ -13,15 +13,15 @@ app.get("/", ( req, res ) => {
     res.send("Hola Mundo, recordando como crear un servidor con express")
 });
 
-app.get("/QuienSoy",( req, res ) => {
+app.get("./QuienSoy",( req, res ) => {
     res.send("Hi Im Damian")
 });
 
-app.get("/Home/:id", ( req, res ) => {
+app.get("./Home/:id", ( req, res ) => {
     res.send(req.params.id)
 });
 
-app.get("*", ( req, res ) => {
+app.get(".*", ( req, res ) => {
     res.send(`<p style="color:red">La dirección que estás consultando no
     existe </p>`)
 });
