@@ -5,8 +5,8 @@ const express = require('express');
 const app = express();
 
 //settings
-const HOST = 'localhost';
-const PORT = 3000
+const HOST = process.env.HOST || 'localhost';
+const PORT = process.env.PORT || 3000;
 
 //routes
 app.get("/", ( req, res ) => {
